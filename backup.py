@@ -32,7 +32,7 @@ class helper:
         for folder in backups:
             index += 1
             if index > self.backup_size:
-                os.removedirs(self.target_folder + os.sep + folder)
+                shutil.rmtree(self.target_folder + os.sep + folder)
 
     def backupfolder(self, folder):
         if os.path.exists(folder):
